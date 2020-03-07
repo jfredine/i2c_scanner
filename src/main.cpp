@@ -4,7 +4,7 @@
 
 void setup() {
     Serial.begin(9600);
-#ifdef __AVR_ATmega328P__
+#if defined(__AVR_ATmega328P__) || defined(__AVR_ATmega2560__)
     Wire.begin();
 #else
     Wire.begin(2, 14);
